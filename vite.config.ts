@@ -6,4 +6,4 @@ import babel from '@rolldown/plugin-babel'
 export default defineConfig({
   base: process.env.NODE_ENV === 'production' ? '/landingPage/' : '/',
   plugins: [react(), babel({ presets: [reactCompilerPreset()] })],
-})
+});
