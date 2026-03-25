@@ -73,3 +73,18 @@ export default defineConfig([
   },
 ])
 ```
+
+## GitHub Pages deployment
+
+1. Asegurate en `vite.config.ts` que `base: '/matiszn/'` (ya está configurado).
+2. Usá el script:
+   - `npm run deploy` (ejecuta `npm run build` y publica `dist` con `gh-pages`).
+3. En GitHub Repo > Settings > Pages:
+   - Source: `gh-pages` branch, / (root) o `main` branch si querés cambiar manual.
+4. Cada push a `main` desplegará automáticamente con workflow: `.github/workflows/deploy-pages.yml`.
+
+Notas:
+- No necesitas más copiar `dist` a mano en root.
+- Si estás en blanco, verificá que la URL de `script` en `dist/index.html` apunte a `/matiszn/assets/...` y no `/src/main.tsx`.
+
+```
