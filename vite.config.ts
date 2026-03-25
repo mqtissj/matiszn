@@ -4,6 +4,7 @@ import babel from '@rolldown/plugin-babel'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/landingPage/' : '/',
+  // GitHub Pages path for this repo (example: https://mqtissj.github.io/matiszn/)
+  base: process.env.NODE_ENV === 'production' ? '/matiszn/' : '/',
   plugins: [react(), babel({ presets: [reactCompilerPreset()] })],
 });
